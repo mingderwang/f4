@@ -87,3 +87,16 @@ Test result: ok. 2 passed; 0 failed; 0 skipped; finished in 158.30ms
 
 Ran 1 test suites: 2 tests passed, 0 failed, 0 skipped (2 total tests)
 ```
+
+## remapping
+
+```shell
+➜  f4 git:(main) forge remappings > remappings.txt
+
+➜  f4 git:(main) ✗ cat remappings.txt
+@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
+ds-test/=lib/forge-std/lib/ds-test/src/
+erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/
+forge-std/=lib/forge-std/src/
+openzeppelin-contracts/=lib/openzeppelin-contracts/
+```
