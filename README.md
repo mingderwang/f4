@@ -110,3 +110,19 @@ openzeppelin-contracts/=lib/openzeppelin-contracts/
 [⠆] Solc 0.8.21 finished in 7.67s
 Compiler run successful!
 ```
+
+## forge test
+
+```shell
+➜  f4 git:(main) ✗ forge test
+[⠒] Compiling...
+[⠘] Compiling 1 files with 0.8.21
+[⠊] Solc 0.8.21 finished in 7.31s
+Compiler run successful!
+
+Running 1 test for test/MyToken.t.sol:MyTokenTest
+[PASS] testMint() (gas: 58176)
+Test result: ok. 1 passed; 0 failed; 0 skipped; finished in 33.07ms
+
+Ran 1 test suites: 1 tests passed, 0 failed, 0 skipped (1 total tests)
+```
