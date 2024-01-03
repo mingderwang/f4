@@ -10,4 +10,3 @@ contract MyTokenScript is Script {
         vm.broadcast();
     }
 }
-
