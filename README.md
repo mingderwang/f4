@@ -151,3 +151,28 @@ Test result: ok. 1 passed; 0 failed; 0 skipped; finished in 3.93ms
 
 Ran 1 test suites: 1 tests passed, 0 failed, 0 skipped (1 total tests)
 ```
+
+## forge test --gas-report
+
+```shell
+➜  f4 git:(main) forge test --gas-report
+[⠒] Compiling...
+No files changed, compilation skipped
+
+Running 1 test for test/MyToken.t.sol:MyTokenTest
+[PASS] testMint() (gas: 58176)
+Test result: ok. 1 passed; 0 failed; 0 skipped; finished in 2.48ms
+| src/MyToken.sol:MyToken contract |                 |       |        |       |         |
+|----------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost                  | Deployment Size |       |        |       |         |
+| 518372                           | 3007            |       |        |       |         |
+| Function Name                    | min             | avg   | median | max   | # calls |
+| balanceOf                        | 563             | 563   | 563    | 563   | 1       |
+| mint                             | 49064           | 49064 | 49064  | 49064 | 1       |
+
+
+
+
+Ran 1 test suites: 1 tests passed, 0 failed, 0 skipped (1 total tests)
+➜  f4 git:(main)
+```
