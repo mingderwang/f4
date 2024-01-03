@@ -100,3 +100,13 @@ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/
 forge-std/=lib/forge-std/src/
 openzeppelin-contracts/=lib/openzeppelin-contracts/
 ```
+
+## forge build
+
+```shell
+➜  script git:(main) ✗ forge build
+[⠔] Compiling...
+[⠊] Compiling 9 files with 0.8.21
+[⠆] Solc 0.8.21 finished in 7.67s
+Compiler run successful!
+```
