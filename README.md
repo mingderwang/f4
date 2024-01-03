@@ -126,3 +126,28 @@ Test result: ok. 1 passed; 0 failed; 0 skipped; finished in 33.07ms
 
 Ran 1 test suites: 1 tests passed, 0 failed, 0 skipped (1 total tests)
 ```
+
+## forge test -vvvv
+
+```shell
+➜  f4 git:(main) forge test -vvvv
+[⠢] Compiling...
+No files changed, compilation skipped
+
+Running 1 test for test/MyToken.t.sol:MyTokenTest
+[PASS] testMint() (gas: 58176)
+Traces:
+  [58176] MyTokenTest::testMint()
+    ├─ [0] VM::prank(0x636C16881D405cdE477f56546825c88862be5189)
+    │   └─ ← ()
+    ├─ [49064] MyToken::mint(0x001C7CA24BC0B0b81b2F9Ee69dEDD76995861C39, 10000000 [1e7])
+    │   ├─ emit Transfer(from: 0x0000000000000000000000000000000000000000, to: 0x001C7CA24BC0B0b81b2F9Ee69dEDD76995861C39, value: 10000000 [1e7])
+    │   └─ ← ()
+    ├─ [563] MyToken::balanceOf(0x001C7CA24BC0B0b81b2F9Ee69dEDD76995861C39) [staticcall]
+    │   └─ ← 10000000 [1e7]
+    └─ ← ()
+
+Test result: ok. 1 passed; 0 failed; 0 skipped; finished in 3.93ms
+
+Ran 1 test suites: 1 tests passed, 0 failed, 0 skipped (1 total tests)
+```
