@@ -249,3 +249,103 @@ Genesis Timestamp
 
 Listening on 127.0.0.1:8545
 ```
+
+## deployment
+
+```shell
+➜  f4 git:(main) forge script script/DeployMyToken.sol:DeployMyTokenScript --rpc-url $SEPOLIA_URL --broadcast --verify -vvvv
+[⠔] Compiling...
+No files changed, compilation skipped
+Traces:
+  [576327] DeployMyTokenScript::run()
+    ├─ [0] VM::envUint(DEPLOYER_PRIVATE_KEY) [staticcall]
+    │   └─ ← <env var value>
+    ├─ [0] VM::envAddress(CONTRACT_OWNER_ADDRESS) [staticcall]
+    │   └─ ← <env var value>
+    ├─ [0] VM::startBroadcast(<pk>)
+    │   └─ ← ()
+    ├─ [518372] → new MyToken@0xd7C8d8a67288dF71140Fed5dEFEB9a2cab21645F
+    │   ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xEd588bce2d3a2Fd4681258417Df2eB31149cb879)
+    │   └─ ← 2244 bytes of code
+    ├─ [0] VM::stopBroadcast()
+    │   └─ ← ()
+    └─ ← ()
+
+
+Script ran successfully.
+
+## Setting up (1) EVMs.
+==========================
+Simulated On-chain Traces:
+
+  [617844] → new MyToken@0xd7C8d8a67288dF71140Fed5dEFEB9a2cab21645F
+    ├─ emit OwnershipTransferred(previousOwner: 0x0000000000000000000000000000000000000000, newOwner: 0xEd588bce2d3a2Fd4681258417Df2eB31149cb879)
+    └─ ← 2244 bytes of code
+
+
+==========================
+
+Chain 11155111
+
+Estimated gas price: 127.324994017 gwei
+
+Estimated total gas used for script: 803197
+
+Estimated amount required: 0.102267053219472349 ETH
+
+==========================
+
+###
+Finding wallets for all the necessary addresses...
+##
+Sending transactions [0 - 0].
+⠁ [00:00:00] [##########################################################################] 1/1 txes (0.0s)
+Transactions saved to: /private/tmp/f4/broadcast/DeployMyToken.sol/11155111/run-latest.json
+
+Sensitive values saved to: /private/tmp/f4/cache/DeployMyToken.sol/11155111/run-latest.json
+
+##
+Waiting for receipts.
+⠉ [00:00:20] [######################################################################] 1/1 receipts (0.0s)
+##### sepolia
+✅  [Success]Hash: 0xa7d5c20213d59640752b70e3a1034fd50bb6a0a90d711c9a77d3f8fdfc98b0ef
+Contract Address: 0xd7C8d8a67288dF71140Fed5dEFEB9a2cab21645F
+Block: 5014077
+Paid: 0.048100354110180384 ETH (618032 gas * 77.828258262 gwei)
+
+
+Transactions saved to: /private/tmp/f4/broadcast/DeployMyToken.sol/11155111/run-latest.json
+
+Sensitive values saved to: /private/tmp/f4/cache/DeployMyToken.sol/11155111/run-latest.json
+
+
+
+==========================
+
+ONCHAIN EXECUTION COMPLETE & SUCCESSFUL.
+Total Paid: 0.048100354110180384 ETH (618032 gas * avg 77.828258262 gwei)
+##
+Start verification for (1) contracts
+Start verifying contract `0xd7C8d8a67288dF71140Fed5dEFEB9a2cab21645F` deployed on sepolia
+
+Submitting verification for [src/MyToken.sol:MyToken] "0xd7C8d8a67288dF71140Fed5dEFEB9a2cab21645F".
+Submitted contract for verification:
+	Response: `OK`
+	GUID: `vscajfatxumxfwefw6bwtnprsepyv3rhhp3wcru3bq9vqcucfp`
+	URL:
+        https://sepolia.etherscan.io/address/0xd7c8d8a67288df71140fed5defeb9a2cab21645f
+Contract verification status:
+Response: `NOTOK`
+Details: `Pending in queue`
+Contract verification status:
+Response: `OK`
+Details: `Pass - Verified`
+Contract successfully verified
+All (1) contracts were verified!
+
+Transactions saved to: /private/tmp/f4/broadcast/DeployMyToken.sol/11155111/run-latest.json
+
+Sensitive values saved to: /private/tmp/f4/cache/DeployMyToken.sol/11155111/run-latest.json
+
+➜  f4 git:(main)
+```
