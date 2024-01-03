@@ -64,3 +64,26 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+# Test
+
+```shell
+➜  f4 git:(main) # 1. building the project
+forge build
+# 2. testing example contract
+forge test
+
+[⠒] Compiling...
+[⠒] Compiling 24 files with 0.8.21
+[⠆] Solc 0.8.21 finished in 21.92s
+Compiler run successful!
+[⠆] Compiling...
+No files changed, compilation skipped
+
+Running 2 tests for test/Counter.t.sol:CounterTest
+[PASS] testFuzz_SetNumber(uint256) (runs: 256, μ: 27709, ~: 28409)
+[PASS] test_Increment() (gas: 28379)
+Test result: ok. 2 passed; 0 failed; 0 skipped; finished in 158.30ms
+
+Ran 1 test suites: 2 tests passed, 0 failed, 0 skipped (2 total tests)
+```
